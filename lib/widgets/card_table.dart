@@ -77,7 +77,7 @@ class _CardBackground extends StatelessWidget {
   final Widget child;
 
   const _CardBackground({
-    Key? key,           // Allows keeping the reference to the widget
+    Key? key,           // Allows keeping the reference to the widgetd
     required this.child
   }) : super(key: key);
 

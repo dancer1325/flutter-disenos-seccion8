@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
       //   child: Text('Hello'),
       // ),
       // Switch the initialRoute, to display different screens
-      initialRoute: 'basic_design',
-      // initialRoute: 'scroll_screen',
+      // initialRoute: 'basic_design',
+      initialRoute: 'scroll_screen',
       // initialRoute: 'home_screen',
       routes: {
         //  Since BuildContext isn't used --> Use '_'
