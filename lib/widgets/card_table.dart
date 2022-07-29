@@ -34,16 +34,10 @@ class CardTable extends StatelessWidget {
             _SigleCard( color: Colors.pinkAccent, icon: Icons.car_rental, text: 'Transport' ),
           ]
         ),
-
-        
-
-        
-
       ],
     );
   }
 }
-
 
 class _SigleCard extends StatelessWidget {
 
@@ -78,13 +72,12 @@ class _SigleCard extends StatelessWidget {
   }
 }
 
-
 class _CardBackground extends StatelessWidget {
 
   final Widget child;
 
   const _CardBackground({
-    Key? key, 
+    Key? key,           // Allows keeping the reference to the widget
     required this.child
   }) : super(key: key);
 
