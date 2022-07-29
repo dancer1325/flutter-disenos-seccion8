@@ -36,6 +36,12 @@ samples, guidance on mobile development, and a full API reference.
         * File > New > New Flutter Project
 
 ## Note
+* Architecture of the repo
+    * 'lib'
+        * '/screens'
+            * Related to a whole screen
+        * '/widgets'
+            * Widgets to be able to reuse around the screens
 * How to add assets?
     * Specify it in 'pubspec.yaml'
 * Shortcuts
@@ -46,3 +52,6 @@ samples, guidance on mobile development, and a full API reference.
         * [Android Studio] https://medium.com/flutter-community/flutter-ide-shortcuts-for-faster-development-2ef45c51085b
 * Flutter inspector
     * [Android Studio] https://www.woolha.com/tutorials/using-flutter-widget-inspector-in-android-studio
+* '.yaml' files
+    * Take care with the whitespaces
+
