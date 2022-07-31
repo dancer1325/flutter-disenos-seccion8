@@ -9,7 +9,7 @@ class ScrollScreen extends StatelessWidget {
       gradient: LinearGradient(
         begin: Alignment.topCenter,   // By default the LinearGradient is from left --> right
         end: Alignment.bottomCenter,
-        stops: [0.5,0.5],             // Moment to start the gradien
+        stops: [0.5,0.5],             // Moment to start the gradient
         colors: [
           Color(0xff5EE8C5),
           Color(0xff30BAD6)

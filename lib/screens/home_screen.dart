@@ -5,13 +5,12 @@ import 'package:disenos/widgets/card_table.dart';
 import 'package:disenos/widgets/custom_bottom_navigation.dart';
 import 'package:disenos/widgets/page_title.dart';
 
-
 class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
+      body: Stack(    // Allows placing widgets one in top to each other
         children: [
           // Background
           Background(),
@@ -26,10 +25,9 @@ class HomeScreen extends StatelessWidget {
 
 class _HomeBody extends StatelessWidget {
 
-
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return SingleChildScrollView(   // Wrap under SingleChildScrollView, to make scrolling
       child: Column(
         children: [
 

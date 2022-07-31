@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class CardTable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Table(
+    return Table(     // Table which it's specified by row
       children: [
         TableRow(
           children: [
@@ -57,9 +57,9 @@ class _SigleCard extends StatelessWidget {
 
       return _CardBackground( 
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,      // mainAxisAlignment in a column is in vertical
           children: [
-            CircleAvatar(
+            CircleAvatar(     // Flutter statelessWidget
               backgroundColor: this.color,
               child: Icon( this.icon, size: 35, color: Colors.white, ),
               radius: 30,
@@ -72,6 +72,7 @@ class _SigleCard extends StatelessWidget {
   }
 }
 
+// Extract in this widget to handle all the style
 class _CardBackground extends StatelessWidget {
 
   final Widget child;
@@ -83,13 +84,13 @@ class _CardBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container(     // Wrap under Container to add the margin
           margin: EdgeInsets.all(15),
-          child: ClipRRect(
+          child: ClipRRect(     // Wrap under ClipRRect, in order to apply the blur just to the specific container and add the borderRadius
             borderRadius: BorderRadius.circular(20),
-            child: BackdropFilter(
-              filter: ImageFilter.blur( sigmaX: 5, sigmaY: 5 ),
-              child: Container(
+            child: BackdropFilter(    // Wrap under BackdropFilter, to apply the blur filter
+              filter: ImageFilter.blur( sigmaX: 5, sigmaY: 5 ),   // sigmaX and sigmaY, to handle how to expand the blur
+              child: Container(     // Wrap under Container to add the 'decoration'
                 height: 180,
                 decoration: BoxDecoration(
                   color: Color.fromRGBO(62, 66, 107, 0.7),

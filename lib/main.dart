@@ -11,20 +11,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    // It comes in 'package:flutter/services.dart'
+    // Specify the style to use for the system overlays that are visible (Time, battery level, signal, ...)
     SystemChrome.setSystemUIOverlayStyle( SystemUiOverlayStyle.light );
 
     return MaterialApp(
-      debugShowCheckedModeBanner: false,      // Mode banner displayed in top rightd
+      debugShowCheckedModeBanner: false,      // Mode banner displayed in top right
       title: 'Material App',
-      theme: ThemeData.dark(),
+      theme: ThemeData.dark(),      // Blur works better for dark themes
       // If you use routes an initialRoute --> home attribute won't be display
       // home: Center(
       //   child: Text('Hello'),
       // ),
       // Switch the initialRoute, to display different screens
       // initialRoute: 'basic_design',
-      initialRoute: 'scroll_screen',
-      // initialRoute: 'home_screen',
+      // initialRoute: 'scroll_screen',
+      initialRoute: 'home_screen',
       routes: {
         //  Since BuildContext isn't used --> Use '_'
         'basic_design' : ( _ ) => BasicDesignScreen(),

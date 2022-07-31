@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
 
+  // Description to paint a box
   final boxDecoration = BoxDecoration(
       gradient: LinearGradient(
-        begin: Alignment.topCenter,
+        begin: Alignment.topCenter,     // By default the LinearGradient is from left --> right
         end: Alignment.bottomCenter,
-        stops: [0.2, 0.8],
+        stops: [0.2, 0.8],              // Moment to start the gradient
         colors: [
           Color(0xff2E305F),
           Color(0xff202333)
@@ -18,10 +19,13 @@ class Background extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Stack(     // Allows placing widgets one in top to each other. Desired design has got a pink box and a gradient purple --> blue
       children: [
-        // Purple Gradinet
-        Container(decoration: boxDecoration ),
+        // Purple Gradient
+        Container(      // Wrap under Container to add the 'decoration', not possible directly via Scaffold
+            decoration: boxDecoration,
+            // color: Colors.red          // Normally it's added to check the space which occupies
+        ),
 
         // Pink box
         Positioned(
@@ -34,7 +38,6 @@ class Background extends StatelessWidget {
   }
 }
 
-
 class _PinkBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -43,10 +46,10 @@ class _PinkBox extends StatelessWidget {
       child: Container(
         width: 360,
         height: 360,
-        decoration: BoxDecoration(
+        decoration: BoxDecoration(      // This BoxDecoration could be extracted also
           borderRadius: BorderRadius.circular(80),
           gradient: LinearGradient(
-            colors: [
+            colors: [     // >=2 colors
               Color.fromRGBO(236, 98, 188, 1),
               Color.fromRGBO(241, 142, 172, 1),
             ]
